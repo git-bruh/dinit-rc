@@ -17,8 +17,9 @@ cp scripts/* "$SCRIPTDIR"
 mkdir -p "$SERVICEDIR"
 cp core/* "$SERVICEDIR"
 
-mkdir -p "$CONFDIR/config" "$CONFDIR/boot.d"
+mkdir -p "$CONFDIR/config" "$CONFDIR/boot.d" "$CONFDIR/user"
 cp extra/* "$CONFDIR"
+cp user/* "$CONFDIR/user"
 cp conf/* "$CONFDIR/config"
 
 mkdir -p "$LOGDIR"
