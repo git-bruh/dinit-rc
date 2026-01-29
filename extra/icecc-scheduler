@@ -1,0 +1,8 @@
+type            = process
+command         = /usr/bin/icecc-scheduler
+env-file        = /etc/dinit.d/config/icecream.conf
+smooth-recovery = no
+logfile         = /var/log/dinit/icecc-scheduler.log
+depends-on      = network.target
+before          = login.target
+

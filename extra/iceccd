@@ -1,0 +1,8 @@
+type            = process
+command         = /usr/bin/iceccd -m ${ICECREAM_MAX_JOBS}
+env-file        = /etc/dinit.d/config/icecream.conf
+smooth-recovery = true
+logfile         = /var/log/dinit/iceccd.log
+depends-on      = icecc-scheduler
+before          = login.target
+
