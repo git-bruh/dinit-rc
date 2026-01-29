@@ -1,5 +1,0 @@
-type       = scripted
-command    = /usr/lib/dinit/dmesg
-restart    = false
-depends-on = login.target
-
