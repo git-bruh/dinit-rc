@@ -1,4 +1,4 @@
-#!/bin/execlineb -P
+#!/bin/execlineb
 importas -i TTY 1
 envfile -I /etc/dinit.d/config/${TTY}.conf
 importas -uD "yes" SPAWN SPAWN
