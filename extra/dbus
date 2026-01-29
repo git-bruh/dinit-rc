@@ -1,0 +1,9 @@
+type               = process
+command            = /usr/bin/install -m755 -d /run/dbus && /usr/bin/dbus-daemon --system --nofork --nopidfile --print-address=4
+before             = login.target
+depends-on         = local.target
+logfile            = /var/log/dinit/dbus-daemon.log
+ready-notification = pipefd:4
+smooth-recovery    = no
+run-as             = messagebus
+

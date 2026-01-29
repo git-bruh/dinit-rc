@@ -1,0 +1,8 @@
+type               = process
+command            = /usr/lib/bluetooth/bluetoothd -n 2>&1
+smooth-recovery    = true
+logfile            = /var/log/dinit/bluetoothd.log
+depends-on         = dbus
+depends-on         = local.target
+before             = login.target
+
