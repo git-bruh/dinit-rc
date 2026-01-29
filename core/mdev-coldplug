@@ -1,5 +1,6 @@
 type       = scripted
 command    = /usr/bin/mdevd-coldplug -O4
 restart    = false
+depends-on = mdevd
 depends-on = early-prepare.target
 
