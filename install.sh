@@ -14,7 +14,7 @@ CONFDIR="$DESTDIR/etc/dinit.d"
 mkdir -p "$SCRIPTDIR"
 cp scripts/* "$SCRIPTDIR"
 
-mkdir -p "$SERVICEDIR"
+mkdir -p "$SERVICEDIR" "$SERVICEDIR/boot.d"
 cp core/* "$SERVICEDIR"
 
 mkdir -p "$CONFDIR/config" "$CONFDIR/boot.d"
