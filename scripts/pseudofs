@@ -19,7 +19,9 @@ if {
     mount -t tmpfs shm /dev/shm -o mode=1777,nosuid,nodev
 }
 
-exec mount -t proc proc /proc -o nosuid,noexec,nodev
+if {
+    mount -t proc proc /proc -o nosuid,noexec,nodev
+}
 
 if {
     mount -t sysfs sys /sys -o nosuid,noexec,nodev
