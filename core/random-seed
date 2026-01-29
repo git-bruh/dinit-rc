@@ -1,0 +1,8 @@
+type         = scripted
+command      = /usr/lib/dinit/random-seed
+stop-command = /usr/lib/dinit/random-seed
+restart      = false
+waits-for    = early-modules.target
+waits-for    = early-fs-local.target
+depends-on   = early-devices.target
+

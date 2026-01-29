@@ -1,0 +1,4 @@
+type       = internal
+depends-on = root-ro
+depends-on = pseudofs
+depends-on = cgroups

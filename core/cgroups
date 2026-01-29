@@ -1,0 +1,5 @@
+type       = scripted
+command    = /usr/lib/dinit/mount-cgroups
+restart    = false
+depends-on = pseudofs
+

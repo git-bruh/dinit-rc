@@ -1,0 +1,5 @@
+type       = scripted
+command    = /usr/lib/dinit/modules
+restart    = false
+depends-on = early-devices.target
+

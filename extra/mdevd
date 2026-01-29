@@ -1,0 +1,7 @@
+type            = process
+command         = /usr/bin/mdevd -D3 -O4
+depends-on      = early-devices.target
+before          = pre-local.target
+restart         = true
+smooth-recovery = true
+

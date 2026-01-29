@@ -1,0 +1,10 @@
+#!/bin/execlineb -P
+importas -i TTY 1
+envfile -I /etc/dinit.d/config/${TTY}.conf
+importas -uD "yes" SPAWN SPAWN
+importas -sCuD "" ARGS ARGS
+importas -sCuD "agetty" GETTY GETTY
+if -t { test -e /dev/${TTY} }
+if -t { test ${SPAWN} = "yes" }
+	exec ${GETTY} -L -8 ${TTY} 115200 ${ARGS}
+

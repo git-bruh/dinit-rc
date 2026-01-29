@@ -1,0 +1,6 @@
+type         = scripted
+command      = /usr/lib/dinit/rclocal startup
+stop-command = /usr/lib/dinit/rclocal shutdown
+restart      = false
+depends-on   = pre-local.target
+

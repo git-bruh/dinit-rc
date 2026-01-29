@@ -1,0 +1,6 @@
+type      = scripted
+command   = /usr/lib/dinit/sysctl
+restart   = false
+after     = early-devices.target
+after     = early-fs-local.target
+

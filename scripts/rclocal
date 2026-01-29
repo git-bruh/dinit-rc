@@ -1,0 +1,22 @@
+#!/bin/sh
+
+
+case "$1" in
+    startup)
+        if [ -d /etc/local.d ]; then
+            for file in /etc/local.d/*.start; do
+                [ -x "$file" ] && "$file"
+            done
+        fi
+        [ -x /etc/rc.local ]    && /etc/rc.local ;;
+    shutdown)
+        if [ -d /etc/local.d ]; then
+            for file in /etc/local.d/*.stop; do
+                [ -x "$file" ] && "$file"
+            done
+        fi
+        [ -x /etc/rc.shutdown ] && /etc/rc.shutdown ;;
+esac
+
+exit 0
+
