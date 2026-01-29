@@ -1,0 +1,6 @@
+type            = process
+command         = /usr/bin/dnsmasq -k
+smooth-recovery = true
+depends-on      = network.target
+before          = login.target
+
